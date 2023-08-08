@@ -1,23 +1,26 @@
 let user = prompt("Enter Your Name");
 
-if(user === "" || user === null)
+if (user === null || user.trim() === "") 
 {
-    user = "guest";
-}
-else if(user === "codecamp")
+  user = "guest";
+  alert("Welcome " + user);
+} 
+else if (user === "codecamp") 
 {
-    let user_password = prompt("Enter your Password");
+  let user_password = prompt("Enter your Password");
+  if (user_password === "123456") 
+  {
+    user = "codecamp";
+    alert("Welcome " + user);
+  } 
+  else {
+    alert("Wrong password");
 
-    if(user_password === "123456")
-    {
-        user = "codecamp";
-    }
-    else{alert("Wrong password");}
-
+  }
+} 
+else {
+  user = "guest";
+  alert("Welcome " + user);
 }
-else 
-{
-    user = "Guest";
-}
 
-alert("Welcome " + user);
+
